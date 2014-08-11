@@ -13,7 +13,11 @@
 		
 
 <h3>List of issues for this project</h3> 
-
+<ul> 
+	<% @project.issues.each do |issue| %> 
+	<li><%= link_to issue.title, issue %> 
+	<% end %> 
+</ul> 
 
 
 

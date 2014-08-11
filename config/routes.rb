@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'timeline/index'
+
   resources :issues
 
   resources :projects
