@@ -15,6 +15,7 @@ private
 	def add_to_timeline
 		Timeline.create!({ content: "An issue was created!", timelineable_id: id, timelineable_type: self.class.to_s })
 	end
+
 	def strip_spaces_from_tags
 		self.tags.gsub! ", ", ","
 	end 

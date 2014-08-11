@@ -79,6 +79,6 @@ class IssuesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def issue_params
-      params.require(:issue).permit(:description, :name, :title, :no_followers)
+      params.require(:issue).permit(:description, :name, :title, :no_followers, :tags)
     end
 end

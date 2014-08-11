@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140811031914) do
+ActiveRecord::Schema.define(version: 20140811032444) do
 
   create_table "issues", force: true do |t|
     t.text     "description"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20140811031914) do
     t.string   "title"
     t.integer  "no_followers"
     t.integer  "project_id",   default: 1
+    t.string   "tags"
   end
 
   create_table "projects", force: true do |t|
