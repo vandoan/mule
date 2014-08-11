@@ -37,6 +37,8 @@ class IssuesController < ApplicationController
     @issue = Issue.new(issue_params)
 
     respond_to do |format|
+      IssueMailer.issue_created(@issue).deliver
+
       if @issue.save
         format.html { redirect_to @issue, notice: 'Issue was successfully created.' }
         format.json { render :show, status: :created, location: @issue }
