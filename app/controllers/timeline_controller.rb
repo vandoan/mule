@@ -1,6 +1,6 @@
 class TimelineController < ApplicationController
   def index
-  	@timeline =Timeline.all 
+  	@timelines =Timeline.all 
   end
 
 

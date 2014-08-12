@@ -1,7 +1,7 @@
 <h1>Timeline#index</h1>
 
 <table> 
-		<%- @timeline.each do |timeline| %> 
+		<%- @timelines.each do |timeline| %> 
 		<tr> 
 			<td> <%=timeline.content %></td> 
 			<td><%=link_to timeline.timelineable.title, timeline.timelineable %> </td> 

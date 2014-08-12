@@ -35,9 +35,8 @@ class IssuesController < ApplicationController
   # POST /issues.json
   def create
     @issue = Issue.new(issue_params)
-
+    IssueMailer.issue_created(@issue).deliver
     respond_to do |format|
-      IssueMailer.issue_created(@issue).deliver
 
       if @issue.save
         format.html { redirect_to @issue, notice: 'Issue was successfully created.' }
